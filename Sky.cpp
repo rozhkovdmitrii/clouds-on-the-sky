@@ -8,12 +8,15 @@ size_t Sky::getCloudsCount() const
         return 0;
     Visited visited(_skyImpl.size(), std::vector<bool>(_skyImpl[0].size(), false));
     size_t cloudCounter = 0;
-    for (int i = 0; i < _skyImpl.size(); ++i) {
+    for (int i = 0; i < _skyImpl.size(); ++i)
+    {
         const std::string & row = _skyImpl[i];
-        for (int j = 0; j < row.size(); ++j) {
+        for (int j = 0; j < row.size(); ++j)
+        {
             if (visited[i][j])
                 continue;
-            if (row[j] == 'w') {
+            if (row[j] == 'w')
+            {
                 ++cloudCounter;
                 markCloudVisited(_skyImpl, i, j, visited);
             }

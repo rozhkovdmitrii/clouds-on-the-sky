@@ -13,11 +13,9 @@ public:
 
     Sky(const SkyImpl & skyImpl);
 
-
     size_t getCloudsCount() const;
 
 private:
-
 
     typedef std::vector<std::vector<bool>> Visited;
 
@@ -25,7 +23,5 @@ private:
 
     SkyImpl _skyImpl;
 };
-
-
 
 #endif //PointH
