@@ -18,14 +18,8 @@ public:
 
 private:
 
-    struct Point
-    {
-        int _x;
-        int _y;
-        bool operator<(const Point & point) const;
-        bool operator==(const Point & point) const;
-    };
-    typedef std::set<Point> Visited;
+
+    typedef std::vector<std::vector<bool>> Visited;
 
     void markCloudVisited(const SkyImpl & sky, int i, int j, Visited & visited) const;
 
