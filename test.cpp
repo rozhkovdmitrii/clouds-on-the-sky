@@ -7,6 +7,12 @@ int main(int argc, char ** argv)
     return RUN_ALL_TESTS();
 }
 
+TEST(TestCloudsCounter, EmptySky)
+{
+    ASSERT_EQ(0, Sky({}).getCloudsCount());
+}
+
+
 TEST(TestCloudsCounter, LittleSkyPatch)
 {
     ASSERT_EQ(0, Sky({"-"}).getCloudsCount());
