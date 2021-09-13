@@ -30,8 +30,6 @@ TEST(TestCloudsCounter, ManyClouds)
                       "-wwwwwwww----w"}).getCloudsCount());
 }
 
-
-
 TEST(TestCloudsCounter, HugeCloudOnTheSky)
 {
     ASSERT_EQ(1, Sky({"wwwwwwwwwwwwww",
@@ -40,5 +38,3 @@ TEST(TestCloudsCounter, HugeCloudOnTheSky)
                       "wwwwwwwwwwwwww",
                       "wwwwwwwwwwwwww"}).getCloudsCount());
 }
-
-
