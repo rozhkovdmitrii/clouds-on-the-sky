@@ -27,7 +27,7 @@ void Sky::markCloudVisited(const Sky::SkyImpl &sky, int i, int j, Visited & visi
     if (i < 0 || i >= sky.size() || j < 0 || j >= sky[i].size())
         return;
 
-    auto visitedPoint = visited[i][j];
+    std::_Bit_reference visitedPoint = visited[i][j];
     if (visitedPoint)
         return;
     visitedPoint = true;
