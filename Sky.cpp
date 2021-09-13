@@ -1,5 +1,5 @@
 #include "Sky.h"
-#include <iostream>
+
 Sky::Sky(const Sky::SkyImpl & skyImpl) : _skyImpl(skyImpl) {}
 
 size_t Sky::getCloudsCount() const
