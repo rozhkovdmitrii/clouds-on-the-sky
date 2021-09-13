@@ -38,3 +38,12 @@ TEST(TestCloudsCounter, HugeCloudOnTheSky)
                       "wwwwwwwwwwwwww",
                       "wwwwwwwwwwwwww"}).getCloudsCount());
 }
+
+TEST(TestCloudsCounter, BlueBlueSky)
+{
+    ASSERT_EQ(0, Sky({"--------------",
+                      "--------------",
+                      "--------------",
+                      "--------------",
+                      "--------------"}).getCloudsCount());
+}
