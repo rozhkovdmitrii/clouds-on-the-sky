@@ -1,5 +1,5 @@
 #include "Sky.h"
-
+#include <iostream>
 Sky::Sky(const Sky::SkyImpl & skyImpl) : _skyImpl(skyImpl) {}
 
 size_t Sky::getCloudsCount() const
@@ -34,7 +34,6 @@ void Sky::markCloudVisited(const Sky::SkyImpl &sky, int i, int j, Visited & visi
     if (visitedPoint)
         return;
     visitedPoint = true;
-
     if (sky[i][j] != 'w')
         return;
 

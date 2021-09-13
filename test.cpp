@@ -20,11 +20,20 @@ TEST(TestCloudsCounter, LittleSkyPatch)
 
 TEST(TestCloudsCounter, CloudInCircle)
 {
-    ASSERT_EQ(2, Sky({"-wwwwwwww-----",
-                      "-w------w-----",
-                      "-w--w---w-----",
-                      "-w------w-----",
-                      "-wwwwwwww-----"}).getCloudsCount());
+    ASSERT_EQ(4, Sky({"wwwwwwwwwwwwwwwwwww",
+                      "ww----------------w",
+                      "ww-wwwwwwwwwwwww--w",
+                      "ww-w-----------w--w",
+                      "ww-w--wwwwww---w--w",
+                      "ww-w--w----w---w--w",
+                      "ww-w--w-w--w---w--w",
+                      "ww-w--w----w---w--w",
+                      "ww-w--wwwwwww--w--w",
+                      "ww-w-----------w--w",
+                      "ww-wwwwwwwwwwwww--w",
+                      "ww----------------w",
+                      "wwwwwwwwwwwwwwwwwww"
+                     }).getCloudsCount());
 }
 
 TEST(TestCloudsCounter, ManyClouds)
